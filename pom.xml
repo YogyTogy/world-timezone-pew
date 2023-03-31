@@ -34,13 +34,14 @@
 				<extensions>true</extensions>
 				<configuration>
 				<cloudHubDeployment>
-				<muleVersion>4.3.0</muleVersion>
+				
 				<username>Yogy99</username>
 				<password>@Tavethiya98</password>
 				<applicationName>Wordtimezone-service</applicationName>
 				<environment>Sandbox</environment>
-				<workerType>MICRO</workerType>
+				<workerType>Micro</workerType>
 				<workers>1</workers>
+				<muleVersion>4.3.0</muleVersion>
 				</cloudHubDeployment>
 				</configuration>
 			</plugin>
