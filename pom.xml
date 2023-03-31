@@ -44,7 +44,7 @@
 				<workerType>Micro</workerType>
 				<workers>1</workers>
 				<password>@Tavethiya98</password>
-				<muleVersion>4.3.0</muleVersion>
+				<muleVersion>4.4.0</muleVersion>
 				</cloudHubDeployment>
 				</configuration>
 			</plugin>
