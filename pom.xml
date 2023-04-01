@@ -20,8 +20,6 @@
 		<mule.maven.plugin.version>3.8.1</mule.maven.plugin.version>
 	</properties>
 
-
-
 	<build>
 		<plugins>
 			<plugin>
@@ -29,7 +27,6 @@
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.2.0</version>
 			</plugin>
-			
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
