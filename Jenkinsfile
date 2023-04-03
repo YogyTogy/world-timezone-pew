@@ -16,7 +16,7 @@
  		
  		stage('Perform Regression Testing'){
  		steps{
- 			bat 'newman run C:\\Users\\tavet\\Desktop\\newman\\worldtimezone.postman_collection.json --disable unicode'
+ 			bat 'C:\\Users\\tavet\\AppData\\Roaming\\npm\\newman run C:\\Users\\tavet\\Desktop\\newman\\worldtimezone.postman_collection.json --disable unicode'
  			}
  		}
  	}
