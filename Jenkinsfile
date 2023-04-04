@@ -8,6 +8,12 @@
  			}
  		}
  		
+ 		stage('MUnit Testing Application'){
+ 		steps{
+ 			bat 'mvn clean install'
+ 			}
+ 		}
+ 		
  		stage('Deploy Application To Mulesoft Cloudhub'){
  		steps{
  		 	bat 'mvn clean deploy -DmuleDeploy'

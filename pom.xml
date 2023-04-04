@@ -9,15 +9,13 @@
 
 	<name>world-demo-api</name>
 
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-
-
 		<app.runtime>4.4.0-20230217</app.runtime>
 		<mule.maven.plugin.version>3.8.1</mule.maven.plugin.version>
+		<munit.version>2.3.13</munit.version>
 	</properties>
 
 	<build>
@@ -33,16 +31,39 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				<cloudHubDeployment>
-				<username>TogyYogy</username>
-				<environment>Sandbox</environment>
-				<applicationName>Wordtimezone-service</applicationName>
-				<objectStoreV2>true</objectStoreV2>
-				<workerType>Micro</workerType>
-				<workers>1</workers>
-				<password>@Tavethiya98</password>
-				<muleVersion>4.4.0</muleVersion>
-				</cloudHubDeployment>
+					<cloudHubDeployment>
+						<username>TogyYogy</username>
+						<environment>Sandbox</environment>
+						<applicationName>Wordtimezone-service</applicationName>
+						<objectStoreV2>true</objectStoreV2>
+						<workerType>Micro</workerType>
+						<workers>1</workers>
+						<password>@Tavethiya98</password>
+						<muleVersion>4.4.0</muleVersion>
+					</cloudHubDeployment>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.mulesoft.munit.tools</groupId>
+				<artifactId>munit-maven-plugin</artifactId>
+				<version>${munit.version}</version>
+				<executions>
+					<execution>
+						<id>test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+							<goal>coverage-report</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<coverage>
+						<runCoverage>true</runCoverage>
+						<formats>
+							<format>html</format>
+						</formats>
+					</coverage>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -60,6 +81,26 @@
 			<artifactId>mule-sockets-connector</artifactId>
 			<version>1.2.3</version>
 			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-runner</artifactId>
+			<version>2.3.13</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-tools</artifactId>
+			<version>2.3.13</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.weave</groupId>
+			<artifactId>assertions</artifactId>
+			<version>1.0.2</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
